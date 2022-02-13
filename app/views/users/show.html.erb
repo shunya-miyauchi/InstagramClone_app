@@ -1,2 +1,8 @@
 <%= @user.user_name %>
 <%= link_to "編集", edit_user_path(@user.id) %>
+
+<%# if @user.image? %>
+  <%#= image_tag"@user.image" %>
+<%# else %>
+  <%#= image_tag"/assets/noimage.png" %>
+<%# end %>
