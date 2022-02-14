@@ -19,6 +19,16 @@
         <td><%= link_to 'Show', picture %></td>
         <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
         <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <% unless picture.user_id == current_user.id %>
+          <% @favorite = current_user.favorites.find_by(picture_id: picture.id) %>
+          <% if @favorite.present? %>
+            <td><%= link_to 'お気に入り解除する', favorite_path(id: @favorite.id), method: :delete, class: 'btn btn-danger' %></td>
+          <% else %>
+            <td><%= link_to 'お気に入りする', favorites_path(picture_id: picture.id), method: :post, class: 'btn btn-primary' %></td>
+          <% end %>
+        <% end %>
+
       </tr>
     <% end %>
   </tbody>
