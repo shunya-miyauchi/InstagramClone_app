@@ -21,6 +21,7 @@
   display: flex;
   width: 960px;
   justify-content: center;
+  border-bottom: thin solid rgba(0, 0, 0, 0.295);
 }
 
 .profile_user_img {
@@ -50,9 +51,7 @@
 }
 
 .favorite_label {
-  border-bottom: thin solid rgba(0, 0, 0, 0.5);
-  padding-top: 30px;
-  margin-bottom: 10px;
+  padding: 10px 0px;
 }
 
 .favorite_imgs {

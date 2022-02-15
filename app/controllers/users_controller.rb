@@ -17,6 +17,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @favorites = current_user.favorites_image
+    @pictures = current_user.pictures
   end
 
   def edit
@@ -30,6 +31,12 @@ class UsersController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def favorites
+    @user = User.find(current_user.id)
+    @favorites = current_user.favorites_image
+    @pictures = current_user.pictures
   end
 
   private
