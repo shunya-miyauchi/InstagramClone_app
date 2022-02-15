@@ -1,15 +1,16 @@
-<%= form_with(model:@user,local:true) do |f| %>
-
-<%= image_tag "InstagramClone.png",size:"240x70" %>
-
-<p>登録して友達の写真や動画をチェックしよう</p>
-
-<%= f.email_field :email,placeholder:"メールアドレス" %><br>
-<%= f.text_field :name,placeholder:"フルネーム" %><br>
-<%= f.text_field :user_name,placeholder:"ユーザーネーム" %><br>
-<%= f.password_field :password, placeholder:"パスワード" %><br>
-<%= f.password_field :password_confirmation,placeholder:"パスワード確認" %><br>
-
-<%= f.submit "登録する"%>
-
+<p class="title">アカウント登録</p>
+<%= render 'layouts/error',name: @user %>
+<%= form_with(model: @user, local: true) do |form| %>  
+  
+  <div class="user_new_form">
+    <%= form.text_field :name,placeholder:"フルネーム" %> 
+    <%= form.text_field :user_name,placeholder:"ユーザーネーム" %> 
+    <%= form.email_field :email,placeholder:"メールアドレス" %>
+    <%= form.password_field :password,placeholder:"パスワード" %>
+    <%= form.password_field :password_confirmation,placeholder:"パスワード確認" %>
+  </div>
+  
+  <div class="user_new_btn">
+    <%= form.submit "アカウント登録",class:"btn btn-outline-primary" %>
+  </div>
 <% end %>

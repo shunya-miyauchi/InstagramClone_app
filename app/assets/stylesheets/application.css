@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+
+ .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  width: auto;
+  margin: 20px auto;
+  font-size: 30px;
+  font-weight: bold;
+  border-bottom: thin solid rgba(0, 0, 0, 0.5);
+}
+
+/* header */
+.main_logo {
+  font-size: x-large;
+  color: black;
+  text-decoration: none;
+}
+
+.icon_img {
+  width: 25px;
+  height: auto;
+  margin-left: 20px;
+}
+
+ .danger {
+   padding: 5px;
+   margin-top: 15px;
+   background-color: red;
+   color: white;
+ }

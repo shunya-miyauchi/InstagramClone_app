@@ -1,0 +1,16 @@
+.login_form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#session_email,#session_password {
+  width: 400px;
+  height: 50px;
+  padding: 10px;
+}
+
+.login {
+  text-align: center;
+  padding: 20px 0px;
+}

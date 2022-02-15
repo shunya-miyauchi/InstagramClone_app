@@ -1,0 +1,93 @@
+// index
+.picture {
+  border: thin solid rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
+
+.picture_header {
+  width: 500px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.user_img {
+  border: thin solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.dropdown {
+  margin-left: auto;
+}
+
+.picture_img {
+  display: block;
+}
+
+.picture_content {
+  padding: 10px;
+}
+
+.favorite_icon {
+  width: 25px;
+  height: auto;
+  margin: 10px 0px 0px 10px;
+}
+
+// new/edit
+.new_edit_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new_edit_content {
+  width: 500px;
+  height: 300px;
+  margin-top: 10px;
+}
+
+.new_edit_image {
+  margin: 20px 0px;
+  text-align: center;
+}
+
+.image_label {
+  border-bottom: thin solid rgba(0, 0, 0, 0.5);
+}
+
+.confirm_back_btn {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.img_cache {
+  text-align: center;
+}
+
+// confirm
+.confirm_btn {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.confirm_content {
+  margin-top: 15px;
+}
+
+// show
+.show_content {
+  width: 500px;
+  padding-bottom: 15px;
+}
+
+.show_image {
+  padding: 15px 0px;
+}
+
+.user_name {
+  font-weight: bold;
+}

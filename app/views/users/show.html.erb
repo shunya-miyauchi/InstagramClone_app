@@ -1,12 +1,21 @@
-<%= current_user.user_name %>
-<%= link_to "編集", edit_user_path(@user.id) %>
 
-<% if @user.image? %>
-  <%= image_tag"@user.image" %>
-<% else %>
-  <%= image_tag"/assets/default.jpeg" %>
-<% end %>
+<div class="profile">
+  <% if @user.image? %>
+    <%= image_tag(@user.image.url,class:"profile_user_img") %>
+  <% else %>
+    <%= image_tag"/assets/default.jpeg",class:"profile_user_img" %>
+  <% end %>
 
-<% @favorites.each do |favorite| %>
-  <%= image_tag(favorite.image.url) %>
-<% end %>
+  <div class="profile_index">
+    <span class="profile_user_name"><%= current_user.user_name %></span>
+    <%= link_to "プロフィールを編集", edit_user_path(@user.id),class:"btn btn-outline-secondary btn-sm" %>
+    <span class="profile_content"><%= current_user.content %></span>
+  </div>
+</div>
+
+<div class="favorite_label">お気に入り</div>
+<div class="favorite_imgs">
+  <% @favorites.each do |favorite| %>
+    <%= image_tag(favorite.image.url,class:"favorite_img") %>
+  <% end %>
+</div>

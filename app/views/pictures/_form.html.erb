@@ -1,20 +1,28 @@
-<%= form_with(model: picture, local: true) do |form| %>
-  <% if picture.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(picture.errors.count, "error") %> prohibited this picture from being saved:</h2>
-
+<%= form_with(model: picture, local: true,url: choose_new_or_edit) do |form| %>
+   <% if picture.errors.any? %>
+    <div id="error_explanation ">
+      <p class="alert alert-danger">エラー</p>
       <ul>
-        <% picture.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
+      <% picture.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
       </ul>
     </div>
   <% end %>
 
-  <%= form.text_field :content,placeholder:"キャプション" %><br>
-  <%= form.file_field :image %>
+  <div class="new_edit_image">
+    <%= form.label :image,"画像を追加",class:"image_label"%><br>
+    <%= form.file_field :image,class:"image_form" %>
+    <%= form.hidden_field :image_cache %>
+  </div>
+  
+  <div class="img_cache">
+  <%= image_tag(@picture.image.url) if @picture.image && @picture.image.url %>  
+  <%= form.text_area :content,placeholder:"キャプションを入力",class:"new_edit_content" %><br>
+  </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="confirm_back_btn">
+    <%= form.submit :確認,class:"btn btn-secondary btn-sm" %>
+    <%= link_to "戻る",pictures_path,class:"btn btn-secondary btn-sm" %>
   </div>
 <% end %>
