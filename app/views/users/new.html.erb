@@ -3,11 +3,11 @@
 <%= form_with(model: @user, local: true) do |form| %>  
   
   <div class="user_new_form">
-    <%= form.text_field :name,placeholder:"フルネーム" %> 
-    <%= form.text_field :user_name,placeholder:"ユーザーネーム" %> 
-    <%= form.email_field :email,placeholder:"メールアドレス" %>
-    <%= form.password_field :password,placeholder:"パスワード" %>
-    <%= form.password_field :password_confirmation,placeholder:"パスワード確認" %>
+    <%= form.text_field :name,placeholder:"フルネーム",class:"user_new" %> 
+    <%= form.text_field :user_name,placeholder:"ユーザーネーム",class:"user_new" %> 
+    <%= form.email_field :email,placeholder:"メールアドレス",class:"user_new" %>
+    <%= form.password_field :password,placeholder:"パスワード",class:"user_new" %>
+    <%= form.password_field :password_confirmation,placeholder:"パスワード確認",class:"user_new" %>
   </div>
   
   <div class="user_new_btn">
