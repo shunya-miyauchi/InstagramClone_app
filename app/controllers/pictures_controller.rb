@@ -34,6 +34,7 @@ class PicturesController < ApplicationController
     else
       respond_to do |format|
         if @picture.save
+          PostMailer.post_mail(current_user).deliver
           format.html { redirect_to pictures_path, notice: "NEW PICTURE"}
           format.json { render :show, status: :created, location: @picture }
         else

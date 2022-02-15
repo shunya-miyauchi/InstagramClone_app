@@ -19,6 +19,10 @@ gem 'psych' , '~> 3.1'
 gem 'bcrypt'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'rexml'
+gem 'net-imap'
+gem 'net-pop'
+gem 'net-smtp'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -29,6 +33,7 @@ group :development do
   gem 'listen', '~> 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'letter_opener_web'
 end
 
 group :test do
