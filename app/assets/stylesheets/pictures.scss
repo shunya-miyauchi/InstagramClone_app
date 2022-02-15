@@ -9,6 +9,7 @@
   padding: 10px;
   display: flex;
   align-items: center;
+  border-bottom: thin solid rgba(0, 0, 0, 0.3);
 }
 
 .user_img {
@@ -29,12 +30,21 @@
 
 .picture_content {
   padding: 10px;
+  
 }
 
 .favorite_icon {
   width: 25px;
   height: auto;
   margin: 10px 0px 0px 10px;
+}
+
+.picture_footer {
+  border-top: thin solid rgba(0, 0, 0, 0.3);
+}
+
+.picture_user_name {
+  font-weight: bold;
 }
 
 // new/edit
