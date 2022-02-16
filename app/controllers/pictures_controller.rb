@@ -45,7 +45,6 @@ class PicturesController < ApplicationController
     end
   end
 
-
   # PATCH/PUT /pictures/1 or /pictures/1.json
   def update
     respond_to do |format|
@@ -79,13 +78,13 @@ class PicturesController < ApplicationController
 
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_picture
-      @picture = Picture.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def picture_params
-      params.require(:picture).permit(:content,:image,:image_cache)
-    end
+  def set_picture
+    @picture = Picture.find(params[:id])
+  end
+
+ 
+  def picture_params
+    params.require(:picture).permit(:content,:image,:image_cache)
+  end
 end
