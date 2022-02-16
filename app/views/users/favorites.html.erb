@@ -18,7 +18,7 @@
 </div>
 
 <div class="favorite_imgs">
-  <% @pictures.each do |picture| %>
-    <%= image_tag(picture.image.url,class:"favorite_img") %>
+  <% @favorites.reverse_each do |favorite| %>
+    <%= image_tag(favorite.image.url,class:"favorite_img") %>
   <% end %>
 </div>
