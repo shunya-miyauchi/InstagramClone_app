@@ -24,7 +24,7 @@ gem 'net-imap'
 gem 'net-pop'
 gem 'net-smtp'
 gem 'faker'
-
+gem 'fog-aws'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
