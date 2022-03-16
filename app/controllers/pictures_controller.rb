@@ -20,7 +20,7 @@ class PicturesController < ApplicationController
 
   # GET /pictures/1/edit
   def edit
-    if current_user != @picture.user  
+    if current_user != @picture.user
       redirect_to pictures_path
     end
   end
@@ -44,6 +44,8 @@ class PicturesController < ApplicationController
       end
     end
   end
+
+  
 
   # PATCH/PUT /pictures/1 or /pictures/1.json
   def update
